@@ -7,13 +7,13 @@
 
 import Foundation
 
-protocol CoinManagerProtocol {
+protocol CoinManagerDelegate {
     func didUpdatePrice(price: String, currency: String)
     func didFailWithError(error: Error)
 }
 
 struct CoinManager {
-    var delegate: CoinManagerProtocol?
+    var delegate: CoinManagerDelegate?
     
     // docs: https://docs.coinapi.io/#get-specific-rate-get
     let baseURL = "https://rest.coinapi.io/v1/exchangerate/BTC"

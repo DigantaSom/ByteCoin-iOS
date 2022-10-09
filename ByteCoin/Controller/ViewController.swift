@@ -53,9 +53,9 @@ extension ViewController: UIPickerViewDelegate {
     }
 }
 
-// MARK: - CoinManagerProtocol
+// MARK: - CoinManagerDelegate
 
-extension ViewController: CoinManagerProtocol {
+extension ViewController: CoinManagerDelegate {
     
     func didUpdatePrice(price: String, currency: String) {
         DispatchQueue.main.async {
